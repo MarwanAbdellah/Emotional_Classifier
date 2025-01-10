@@ -19,60 +19,6 @@ def preprocess_image(image):
     image = np.expand_dims(image, axis=-1)  # Add channel dimension
     return image
 
-# Custom CSS for background and layout
-st.markdown(
-    """
-    <style>
-    /* Change the background of the main page */
-    .main {
-        background: linear-gradient(to right, #ffffff, #f2f2f2);
-        color: #333333;
-        font-family: Arial, sans-serif;
-        padding: 20px;
-    }
-
-    /* Button styles */
-    .button-container {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        margin-top: 20px;
-    }
-    .correct-button > button {
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        padding: 10px 20px;
-        font-size: 16px;
-        transition: 0.3s;
-        cursor: pointer;
-    }
-    .correct-button > button:hover {
-        background-color: #3e8e41;
-    }
-    .incorrect-button > button {
-        background-color: #f44336;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        padding: 10px 20px;
-        font-size: 16px;
-        transition: 0.3s;
-        cursor: pointer;
-    }
-    .incorrect-button > button:hover {
-        background-color: #d32f2f;
-    }
-    .response-container {
-        margin-top: 20px;
-        text-align: center;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 # Streamlit app layout
 st.title('Emotion Classification App')
 st.text('Upload an image or take a picture to classify its emotion.')
